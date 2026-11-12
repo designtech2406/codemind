@@ -1,0 +1,8 @@
+# Whitelist: only Arduino source and repo docs are tracked.
+/*
+!/.gitignore
+!/README.md
+!/room_monitor/
+
+# Never commit Wi-Fi credentials
+secrets.h
