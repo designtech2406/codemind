@@ -28,17 +28,19 @@ uv run main.py
 
 Expected output: `Average model score: 88.5`
 
+If `python main.py` says `ModuleNotFoundError: No module named 'numpy'`, that's the error from the video: plain `python` isn't the project's Python. Use `uv run main.py`.
+
 Then open `hello_ai.ipynb` in VS Code, click **Select Kernel**, and choose `.venv`.
 
 To build the same project from scratch, as in the video:
 
 ```
-uv init --no-package python-for-ai
+uv init --no-package --python 3.12 python-for-ai
 cd python-for-ai
 uv add numpy pandas matplotlib ipykernel
 ```
 
-`--no-package` makes uv create `main.py`. Plain `uv init` in recent versions creates a `src/` folder instead.
+`--no-package` makes uv create `main.py` (plain `uv init` in recent versions creates a `src/` folder instead), and `--python 3.12` pins the project to Python 3.12.
 
 ## Challenge
 
